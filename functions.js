@@ -8,19 +8,19 @@ function equacao() {
     if (delta >= 0 ){
         var raiz = Math.sqrt(delta);
         var x1 = (-b + raiz) / (2 * a);
-	    	var x2 = ((-b) - raiz) / (2 * a);
-    }else if (delta < 0){
+	    	var x2 = ((-b) - raiz) / (2 * a);				
+				var xv = (x1 + x2)/2;
+				var yv = ((a * (xv**2)) + (b * xv) + c);
+				grafico();
+				Vertice(xv,yv);
+				Ponto(x1,x2);
+		}else if (delta < 0){
         x1 = " Sem raiz";
         x2 = " Sem raiz";
     }
-    x.textContent = x1;
-    y.textContent = x2;
-		var xv = (x1 + x2)/2;
-		var yv = ((a * (xv**2)) + (b * xv) + c);
+		x.textContent = x1;
+		y.textContent = x2;
 
-		grafico();
-    Vertice(xv,yv);
-		Ponto(x1,x2);
 }
 
 function f(){
